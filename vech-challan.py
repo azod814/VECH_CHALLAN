@@ -1065,12 +1065,12 @@ def main():
             if choice == '1':
                 # Vehicle Information Only
                 plate_number = input(f"{Fore.YELLOW}[+] Enter Vehicle Registration Number: {Style.RESET_ALL}")
-                if not validate_plate_number(plate_number):
+                if not validate_license_plate(plate_number):
                     print(f"{Fore.RED}[!] Invalid vehicle number format! Please try again.{Style.RESET_ALL}")
                     continue
                 
                 print(f"{Fore.YELLOW}[+] Fetching vehicle information...{Style.RESET_ALL}")
-                vehicle_info = get_vehicle_info_from_api(plate_number)
+                vehicle_info = get_vehicle_info_from_vahan(plate_number)
                 
                 if vehicle_info:
                     display_vehicle_info(vehicle_info)
@@ -1167,4 +1167,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
