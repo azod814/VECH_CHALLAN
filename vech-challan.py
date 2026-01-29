@@ -1111,7 +1111,7 @@ def main():
                         
                         if format_choice == '1':
                             save_to_file({}, challan_data, None)
-                        elif format_choice'2':
+                        elif format_choice == '2':
                             export_to_csv({}, challan_data, None)
                         elif format_choice == '3':
                             export_to_json({}, challan_data, None)
@@ -1167,3 +1167,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
